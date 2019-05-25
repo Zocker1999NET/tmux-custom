@@ -35,9 +35,9 @@ set -g status-right "#[fg=colour235,bg=colour233]#[fg=colour87,bg=colour235] 
 
 # Window status
 #set -g window-status-format "  #I:#W#F  "
-set -g window-status-format "  #I#[fg=colour244]\\#[fg=colour248]#W  "
+set -g window-status-format "  #I#[fg=colour#{?window_zoomed_flag,88,244}]#{?window_zoomed_flag,+,\\}#[default]#W  "
 #set -g window-status-current-format "#[fg=colour233,bg=black]#[fg=colour33] #I:#W#F #[fg=colour233,bg=black]"
-set -g window-status-current-format "#[fg=colour233,bg=black]#[fg=colour87] #I#[fg=colour244]\\#[fg=colour87]#W #[fg=colour233,bg=black]"
+set -g window-status-current-format "#[fg=colour233,bg=black]#[fg=colour87] #I#[fg=colour#{?window_zoomed_flag,1,244}]#{?window_zoomed_flag,+,\\}#[fg=colour87]#W #[fg=colour233,bg=black]"
 
 # Current window status
 set -g window-status-current-bg colour24
