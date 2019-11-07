@@ -32,7 +32,7 @@ set -g status-right "#[fg=colour235,bg=colour233]#[fg=colour87,bg=colour235] 
 
 # Window status
 #set -g window-status-format "  #I:#W#F  "
-set -g window-status-format "  #I#[fg=colour#{?window_zoomed_flag,88,244}]#{?window_zoomed_flag,+,\\}#[default]#W  "
+set -g window-status-format "#[bg=colour233,fg=colour#{?window_bell_flag,220,233}]#[fg=colour#{?window_bell_flag,220,87},bg=colour233] #I#[fg=colour#{?window_zoomed_flag,88,#{?window_bell_flag,220,244}},bg=colour233]#{?window_zoomed_flag,+,\\}#[fg=colour#{?window_bell_flag,220,87}]#W #[fg=colour#{?window_bell_flag,220,233},bg=colour233]"
 #set -g window-status-current-format "#[fg=colour233,bg=black]#[fg=colour33] #I:#W#F #[fg=colour233,bg=black]"
 set -g window-status-current-format "#[fg=colour233,bg=black]#[fg=colour87] #I#[fg=colour#{?window_zoomed_flag,1,244}]#{?window_zoomed_flag,+,\\}#[fg=colour87]#W #[fg=colour233,bg=black]"
 
@@ -40,7 +40,7 @@ set -g window-status-current-format "#[fg=colour233,bg=black]#[fg=colour87] #
 set -g window-status-current-style bg=colour24,fg=colour233
 
 # Window with activity status
-set -g window-status-activity-style bg=colour245,fg=colour233 # fg and bg are flipped here due to a bug in tmux
+set -g window-status-activity-style bg=colour24,fg=colour233 # fg and bg are flipped here due to a bug in tmux
 
 # Window separator
 set -g window-status-separator ""
